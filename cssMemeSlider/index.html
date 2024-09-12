@@ -3,24 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>CSS Meme Slider</title>
   </head>
   <body>
     <div class="slider">
       <div class="slider__wrapper">
-        <div class="slider__line">
-          <img src="./images/meme1.jpg" alt="meme" class="slider__image" />
-          <img src="./images/meme2.jpg" alt="meme" class="slider__image" />
-          <img src="./images/meme3.jpg" alt="meme" class="slider__image" />
-          <img src="./images/meme4.jpg" alt="meme" class="slider__image" />
+        <div class="slider__line__wrapper">
+          <div class="slider__line">
+            <img src="./images/meme2.jpg" alt="meme" class="slider__image" />
+            <img src="./images/meme1.jpg" alt="meme" class="slider__image" />
+            <img src="./images/meme3.jpg" alt="meme" class="slider__image" />
+            <img src="./images/meme4.jpg" alt="meme" class="slider__image" />
+          </div>
         </div>
         <div class="pagination">
-          <div class="pagination__item"></div>
+          <div class="pagination__item pagination__item_selected"></div>
           <div class="pagination__item"></div>
           <div class="pagination__item"></div>
           <div class="pagination__item"></div>
         </div>
-        <div class="slider__text"></div>
+        <p class="slider__text"></p>
       </div>
     </div>
   </body>

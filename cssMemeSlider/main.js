@@ -1,6 +1,7 @@
 const sliderLine = document.querySelector(".slider__line");
 const sliderLineWrapper = document.querySelector(".slider__line__wrapper");
 const paginationItems = document.querySelectorAll(".pagination__item");
+const paginationDots = document.querySelectorAll(".pagination__dot");
 const text = document.querySelector(".slider__text");
 
 const captions = ["First slide", "Second slide", "Third slide", "Fourth slide"];
@@ -10,8 +11,8 @@ let currentIndex = 0;
 
 text.textContent = captions[0];
 
-paginationItems.forEach((item, index, arr) => {
-  item.addEventListener("click", (event) => {
+paginationItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
     counter = index;
 
     if (index !== currentIndex) {
@@ -20,13 +21,28 @@ paginationItems.forEach((item, index, arr) => {
       }px)`;
     }
 
-    item.classList.toggle("pagination__item_selected");
-    arr[currentIndex].classList.toggle("pagination__item_selected");
+    paginationDots[index].classList.toggle("pagination__dot_selected");
+    paginationDots[index].classList.remove("pagination__dot_hovered");
+    paginationDots[index].classList.add("pagination__dot_selected_hovered");
+    paginationDots[currentIndex].classList.toggle("pagination__dot_selected");
     currentIndex = index;
 
     sliderLine.style.transform = `translateX(-${
       counter * sliderLineWrapper.offsetWidth
     }px)`;
+  });
+
+  item.addEventListener("mouseover", () => {
+    if (paginationDots[index].classList.contains("pagination__dot_selected")) {
+      paginationDots[index].classList.add("pagination__dot_selected_hovered");
+    } else {
+      paginationDots[index].classList.add("pagination__dot_hovered");
+    }
+  });
+
+  item.addEventListener("mouseout", () => {
+    paginationDots[index].classList.remove("pagination__dot_hovered");
+    paginationDots[index].classList.remove("pagination__dot_selected_hovered");
   });
 });
 

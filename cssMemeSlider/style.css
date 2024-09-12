@@ -14,6 +14,7 @@ body {
 }
 
 .slider {
+  width: 75vw;
   max-width: 700px;
   border-radius: 10px;
   background-color: rgb(37, 40, 42);
@@ -86,7 +87,7 @@ body {
 
 .slider__image {
   min-width: 100%;
-  height: 45rem;
+  max-height: 45rem;
 }
 
 .slider__text {
@@ -96,4 +97,16 @@ body {
   align-self: self-start;
   color: #fff;
   transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 500px) {
+  .slider__bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pagination {
+    order: 0;
+    align-self: center;
+  }
 }

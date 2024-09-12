@@ -11,6 +11,21 @@ let currentIndex = 0;
 
 text.textContent = captions[0];
 
+window.addEventListener("resize", () => {
+  paginationDots[currentIndex].classList.remove(
+    "pagination__dot_selected_hovered"
+  );
+  counter = 0;
+  currentIndex = 0;
+  text.textContent = captions[0];
+
+  paginationDots.forEach((dot) => {
+    dot.classList.remove("pagination__dot_selected");
+  });
+  paginationDots[0].classList.add("pagination__dot_selected");
+  sliderLine.style.transform = `translateX(0px)`;
+});
+
 paginationItems.forEach((item, index) => {
   item.addEventListener("click", () => {
     counter = index;

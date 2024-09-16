@@ -25,6 +25,7 @@ input {
   border-radius: 10px;
   box-shadow: 12px 12px 15px -6px rgba(34, 60, 80, 0.64);
   padding: 20px;
+  gap: 20px;
 }
 
 .slider__line {
@@ -44,16 +45,33 @@ input {
   border-radius: 10px;
 }
 
+.slider-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-wrapper {
+  overflow: hidden;
+}
+
+.text-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 2rem;
+  transition: transform 0.5s ease-in-out;
+}
+
 .slider__text {
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
   font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
 .pagination {
   display: flex;
   gap: 0.2rem;
-  align-self: flex-end;
 }
 
 .pagination__label {
@@ -136,4 +154,20 @@ input {
 
 #slide4:checked ~ .slider .slider__slide {
   transform: translateX(-300%);
+}
+
+#slide1:checked ~ .slider .slider-bottom .text-wrapper .text-list {
+  transform: translateY(0);
+}
+
+#slide2:checked ~ .slider .slider-bottom .text-wrapper .text-list {
+  transform: translateY(-85%);
+}
+
+#slide3:checked ~ .slider .slider-bottom .text-wrapper .text-list {
+  transform: translateY(-170%);
+}
+
+#slide4:checked ~ .slider .slider-bottom .text-wrapper .text-list {
+  transform: translateY(-255%);
 }

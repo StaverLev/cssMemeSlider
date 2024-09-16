@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CSS Meme Slider</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input type="radio" name="slides" id="slide1" checked />
+      <input type="radio" name="slides" id="slide2" />
+      <input type="radio" name="slides" id="slide3" />
+      <input type="radio" name="slides" id="slide4" />
+
+      <div class="slider">
+        <div class="slider__line">
+          <div class="slider__slide">
+            <img
+              src="./images/meme4.jpg"
+              alt="first slide"
+              class="slider__image"
+            />
+          </div>
+          <div class="slider__slide">
+            <img
+              src="./images/meme2.jpg"
+              alt="second slide"
+              class="slider__image"
+            />
+          </div>
+          <div class="slider__slide">
+            <img
+              src="./images/meme3.jpg"
+              alt="third slide"
+              class="slider__image"
+            />
+          </div>
+          <div class="slider__slide">
+            <img
+              src="./images/meme1.jpg"
+              alt="fourth slide"
+              class="slider__image"
+            />
+          </div>
+        </div>
+
+        <div class="slider-bottom">
+          <div class="text-wrapper">
+            <ul class="text-list">
+              <li class="slider__text">First slide</li>
+              <li class="slider__text">Second slide</li>
+              <li class="slider__text">Third slide</li>
+              <li class="slider__text">Fourth slide</li>
+            </ul>
+          </div>
+          <div class="pagination">
+            <label for="slide1" class="pagination__label">
+              <span class="pagination__dot dot1"></span>
+            </label>
+            <label for="slide2" class="pagination__label">
+              <span class="pagination__dot dot2"></span>
+            </label>
+            <label for="slide3" class="pagination__label">
+              <span class="pagination__dot dot3"></span>
+            </label>
+            <label for="slide4" class="pagination__label">
+              <span class="pagination__dot dot4"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

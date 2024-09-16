@@ -8,44 +8,76 @@
   </head>
   <body>
     <div class="wrapper">
-      <input type="radio" name="slides" id="slide1" checked>
-      <input type="radio" name="slides" id="slide2">
-      <input type="radio" name="slides" id="slide3">
-      <input type="radio" name="slides" id="slide4">
+      <input type="radio" name="slides" id="slide1" checked />
+      <input type="radio" name="slides" id="slide2" />
+      <input type="radio" name="slides" id="slide3" />
+      <input type="radio" name="slides" id="slide4" />
 
       <div class="slider">
         <div class="slider__line">
-          <div class="img-box">
-            <img src="./images/meme1.jpg" alt="first slide" class="slider__image">
+          <div class="slider__slide">
+            <div class="img-box">
+              <img
+                src="./images/meme1.jpg"
+                alt="first slide"
+                class="slider__image"
+              />
+            </div>
+            <div class="slider__text">
+              <p>First slide</p>
+            </div>
           </div>
-          <div class="slider__text">
-            <p>First slide</p>
+          <div class="slider__slide">
+            <div class="img-box">
+              <img
+                src="./images/meme2.jpg"
+                alt="second slide"
+                class="slider__image"
+              />
+            </div>
+            <div class="slider__text">
+              <p>Second slide</p>
+            </div>
           </div>
-          <div class="img-box">
-            <img src="./images/meme2.jpg" alt="second slide" class="slider__image">
+          <div class="slider__slide">
+            <div class="img-box">
+              <img
+                src="./images/meme3.jpg"
+                alt="third slide"
+                class="slider__image"
+              />
+            </div>
+            <div class="slider__text">
+              <p>Third slide</p>
+            </div>
           </div>
-          <div class="slider__text">
-            <p>Second slide</p>
-          </div>
-          <div class="img-box">
-            <img src="./images/meme3.jpg" alt="third slide" class="slider__image">
-          </div>
-          <div class="slider__text">
-            <p>Third slide</p>
-          </div>
-          <div class="img-box">
-            <img src="./images/meme4.jpg" alt="fourth slide" class="slider__image">
-          </div>
-          <div class="slider__text">
-            <p>Fourth slide</p>
+          <div class="slider__slide">
+            <div class="img-box">
+              <img
+                src="./images/meme4.jpg"
+                alt="fourth slide"
+                class="slider__image"
+              />
+            </div>
+            <div class="slider__text">
+              <p>Fourth slide</p>
+            </div>
           </div>
         </div>
 
         <div class="pagination">
-          <label for="slide1" class="pagination__label"></label>
-          <label for="slide2" class="pagination__label"></label>
-          <label for="slide3" class="pagination__label"></label>
-          <label for="slide4" class="pagination__label"></label>
+          <label for="slide1" class="pagination__label">
+            <span class="pagination__dot dot1"></span>
+          </label>
+          <label for="slide2" class="pagination__label">
+            <span class="pagination__dot dot2"></span>
+          </label>
+          <label for="slide3" class="pagination__label">
+            <span class="pagination__dot dot3"></span>
+          </label>
+          <label for="slide4" class="pagination__label">
+            <span class="pagination__dot dot4"></span>
+          </label>
         </div>
       </div>
     </div>
